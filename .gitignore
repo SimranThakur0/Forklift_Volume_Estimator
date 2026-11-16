@@ -155,7 +155,10 @@ activemq-data/
 .venv
 env/
 venv/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9deae7f54bb03e7df28034d9d2e4bbf8bcca31ad
 ENV/
 env.bak/
 venv.bak/
