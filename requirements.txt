@@ -1,0 +1,9 @@
+numpy
+opencv-python        
+pyyaml
+matplotlib
+yt-dlp
+
+# torch torchvision
+# git+https://github.com/microsoft/MoGe.git
+# git+https://github.com/facebookresearch/sam2.git
