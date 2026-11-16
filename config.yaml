@@ -1,0 +1,48 @@
+# ---------------- inputs ----------------
+video_url: "https://www.youtube.com/watch?v=RCqa8Kojlw8"   
+video_path: "data/video.mp4"
+frames_dir: "data/frames"         
+selected_dir: "data/selected"      # <-- PUT YOUR OWN SCREENSHOTS HERE (png/jpg)
+annotations: "data/annotations.json"            # ALL your clicks (never modified by QC)
+annotations_selected: "data/annotations_selected.json"   # only frames that pass QC 
+results_dir: "results"
+
+# ---------------- known sizes ----------------
+# EUR pallet (EPAL 1): 1200 x 800 mm
+pallet:
+  long_mm: 1200
+  short_mm: 800
+
+
+# Which pallet side runs along the big (main) face you click?  "long" -> 1200 mm segments
+visible_side: "long"
+
+# How many pallets are side by side ALONG the main face 
+pallets_along: 2
+
+# How many pallets deep along the narrow end face 
+pallets_deep: 3
+
+# On which side of the main face is the narrow end face visible?  "left" | "right"
+side_on: "left"
+
+# Crate cross-check. VERIFY these (assumed typical values).
+crate:
+  along_face_mm: 400   # crate size along the main face (6 across 2400 mm -> 400)
+  height_mm: 310       # ASSUMPTION - varies by bottle size
+
+# ---------------- Monte Carlo ----------------
+mc:
+  n_samples: 20000
+  click_sigma_px: 3.0
+  yaw_deg_sigma: 12.0     # only used for ONE-face frames (two-face frames solve yaw)
+  yaw_deg_max: 45.0
+  fill_low: 0.93
+  fill_high: 1.00
+  dim_tol: 0.01           # +-1% on nominal pallet size
+  seed: 0
+
+# ---------------- quality gate (frames failing this are dropped from the final number) ----------------
+qc:
+  max_yaw_deg: 40     # weak-perspective model breaks when the forklift is turned too far
+  max_persp: 1.30     # first/last pallet length in px; larger = strong perspective OR a misplaced joint click

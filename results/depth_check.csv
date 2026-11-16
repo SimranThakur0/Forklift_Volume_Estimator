@@ -1,0 +1,4 @@
+frame,pallet_ratio,seg_ratio,V_raw,V_norm,depth_over_length,implied_deep,V_norm_measdepth,plane_rms_m,pallet_ratio_naive
+f003537_t0141.48_s237.jpg,1.207,1.038,12.975,8.91,0.901,2.702,8.025,0.015,1.299
+f003498_t0139.92_s120.jpg,1.354,0.967,15.19,8.287,1.029,3.086,8.525,0.033,1.506
+f003510_t0140.40_s168.jpg,1.302,1.028,15.629,9.213,0.973,2.92,8.969,0.028,1.331

@@ -1,0 +1,10 @@
+{
+  "deep_3": {
+    "median_m3": 8.9,
+    "p5_m3": 7.11,
+    "p95_m3": 10.64,
+    "frames": 3,
+    "pallets_along": 2,
+    "pallets_deep": 3
+  }
+}
